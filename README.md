@@ -34,22 +34,30 @@ Le script téléchargera les données entre le 01/01/2023 et le 31/12/2024, calc
 
 ## Résultats 
 -Pour chaque ticker, un fichier CSV avec les anomalies détectées et leurs indicateurs calculés.
+
 -Un fichier CSV global regroupant toutes les anomalies détectées sur tous les tickers.
+
 -Des graphiques PNG illustrant les prix et points d’anomalies.
 
 ## Explications techniques
 
 ### Indicateurs calculés :
 -SMA_14 : Moyenne mobile simple sur 14 jours
+
 -RSI_14 : Indice de force relative sur 14 jours
+
 -MACD : Différence entre EMA 12 et EMA 26
+
 -MACD_signal : EMA 9 de la MACD
+
 -volatility_14 : Écart-type du pourcentage de variation sur 14 jours
+
 -volume_to_volSMA : ratio entre volume du jour et moyenne mobile 14 jours du volume
 
 ### Détection des anomalies :
 
 -Spikes prix et volume définis par seuils à 3 écarts-types.
+
 -Suspicion de fraude marquée si RSI extrême, volatilité élevée, volume anormal ou MACD anormal.
 
 ## Auteurs 
